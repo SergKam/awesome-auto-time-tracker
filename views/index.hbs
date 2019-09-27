@@ -1,0 +1,25 @@
+<h1>Run</h1>
+<form name="filter" action="/">
+    <input placeholder="Enter SQL query" name="filter" value="{{filter}}">
+</form>
+<table>
+    <caption>Log</caption>
+    <thead>
+    <tr>
+        {{#each headers}}
+            <th>{{this}}</th>
+        {{/each}}
+    </tr>
+    </thead>
+    <tbody>
+
+    {{#each list}}
+        <tr>
+            {{#each this}}
+                <td>{{this}}</td>
+            {{/each}}
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+<hr/>
